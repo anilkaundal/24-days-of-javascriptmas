@@ -12,7 +12,6 @@ Each year the amount of money oryour account increases by 20%. It means that thr
 Thus, it will take 3 years for your balance to pass the threshold, which is the answer.
 /**
 
-
 function depositProfit(deposit, rate, threshold) {
     let years = 0;
     for(let i=1; ;i++){
@@ -23,7 +22,6 @@ function depositProfit(deposit, rate, threshold) {
         }
     }
 }
-
 
 /**
 * Test Suite 
