@@ -24,6 +24,21 @@ function countVowelConsonant(str) {
 }
 
 /**
+Without using reduce()
+const x = str.split("");
+  let sum = 0;
+  for(let i=0; i<x.length; i++){
+      if(x[i] == "a" || x[i] == "e" || x[i] == "i" || x[i] == "o" || x[i] == "u"){
+          sum += 1;
+      }
+      else{
+          sum += 2;
+      }
+  }
+  return sum;
+**/
+
+/**
 * Test Suite 
 */
 describe('countVowelConsonant()', () => {
