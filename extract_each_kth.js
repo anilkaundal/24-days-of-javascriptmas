@@ -16,6 +16,13 @@ function extractEachKth(nums, index) {
 }
 
 /**
+// Another Way
+function extractEachKth(nums, index) {
+    return nums.filter((value, i) => (i + 1) % index !== 0);
+}
+**/
+
+/**
 * Test Suite 
 */
 describe('extractEachKth()', () => {
