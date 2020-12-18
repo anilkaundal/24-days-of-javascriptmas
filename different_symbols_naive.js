@@ -14,6 +14,29 @@ function differentSymbolsNaive(str) {
 }
 
 /**
+// Another Way No. 1
+function differentSymbolsNaive(str) {
+   const chars = str.split('');
+   
+   return new Set(chars).size;
+}
+
+// Another Way No. 2
+function differentSymbolsNaive(str) {
+    const uniqueChars = [];
+    const chars = str.split('');
+    
+    chars.forEach((char) => {
+        if(!uniqueChars.includes(char)) {
+            uniqueChars.push(char);
+        } 
+    });
+    
+    return uniqueChars.length;
+}
+**/
+
+/**
 * Test Suite 
 */
 describe('differentSymbolsNaive()', () => {
