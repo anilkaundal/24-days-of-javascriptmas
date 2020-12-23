@@ -23,6 +23,35 @@ function extractMatrixColumn(matrix, column) {
 }
 
 /**
+// Another Way 1
+function extractMatrixColumn(matrix, column) {
+    const retVal = [];
+    
+    for(let row of matrix){
+        retVal.push(row[column])
+    }
+    
+    return retVal;
+}
+
+// Another Way 2
+function extractMatrixColumn(matrix, column) {
+    const retVal = [];
+    
+    matrix.forEach( row =>{
+      retVal.push(row[column])  
+    })
+    
+    return retVal;
+}
+
+// Another Way 3
+function extractMatrixColumn(matrix, column) {
+    return matrix.map( row => row[column]);         
+}
+**/
+
+/**
 * Test Suite 
 */
 describe('extractMatrixColumn()', () => {
