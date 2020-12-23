@@ -37,6 +37,24 @@ function domainType(domains) {
 }
 
 /**
+// Another Way
+function domainType(domains) {
+  return domains.map((str) => {
+    if (/\.org($|\/)/.test(str)) return 'organization';
+    if (/\.com($|\/)/.test(str)) return 'commercial';
+    if (/\.net($|\/)/.test(str)) return 'network';
+    if (/\.info($|\/)/.test(str)) return 'information';
+    if (/\.de($|\/)/.test(str)) return 'germany';
+    if (/\.ch($|\/)/.test(str)) return 'switzerland';
+    if (/\.co\.uk($|\/)/.test(str)) return 'united kingdom commercial';
+    if (/\.uk($|\/)/.test(str)) return 'united kingdom';
+    //todo: add more tld
+    return 'unkown or invalid domain';
+  });
+}
+**/
+
+/**
 * Test Suite 
 */
 describe('domainType()', () => {
